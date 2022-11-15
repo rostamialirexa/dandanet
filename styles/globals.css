@@ -1,26 +1,305 @@
-html,
-body {
+@font-face {
+  font-family: myFirstFont;
+  src: url('/font/Qs_Iranyekan.ttf');
+}
+@font-face {
+  font-family: BoldFont;
+  src: url('/font/Qs_Iranyekanbold.ttf');
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: BoldFont;
+}
+Col {
   padding: 0;
+}
+*,
+*:before,
+*:after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+  padding: 0;
   box-sizing: border-box;
 }
+a {
+text-decoration: none;
+}
+Link {
+  text-decoration: none;
+}
+body {
+  font-family: myFirstFont;
+  background-color: #fff;
+}
+li {
+  list-style: none;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 10vw;
+  text-align: center;
+  color: #fff;
+  transition: 0.5s all;
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* button style */
+.swiper-pagination-bullet {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin: 0 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.swiper-pagination-bullet span {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* button circle */
+.progress {
+  transform: rotate(-90deg);
+}
+.circle-origin {
+  fill: transparent;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-dasharray: 125.664px;
+  stroke-dashoffset: 125.664px;
+}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.swiper-pagination-bullet-active .circle-origin {
+  animation: progress 5s;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dashoffset: 125.664px;
   }
-  body {
-    color: white;
-    background: black;
+
+  90% {
+    stroke-dashoffset: 0;
   }
+
+  100% {
+    stroke-dashoffset: -125.664px;
+  }
+}
+nav.navbar.bootsnav{
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 150px;
+  border: none;
+  background-color: transparent;
+}
+nav.navbar.bootsnav .navbar-collapse{ padding: 0; }
+nav.navbar.bootsnav ul.nav > li > a{
+  color: #273c75;
+  background-color: #4cd137;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 15px 10px;
+  margin: 0 7px 0 0;
+  border-radius: 20px;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{ padding: 10px 25px 10px 10px; }
+nav.navbar.bootsnav ul.nav > li.active > a,
+nav.navbar.bootsnav ul.nav > li.active > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.on > a{
+  color: #fff;
+  background-color: #273c75;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+}
+nav.navbar.bootsnav ul.nav > li > a>span:before,
+nav.navbar.bootsnav ul.nav > li > a>span:after{
+  content: '';
+  background-color: #4cd137;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.3s;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+nav.navbar.bootsnav ul.nav > li > a>span:after{ clip-path: polygon(100% 100%, 100% 0, 0 100%); }
+nav.navbar.bootsnav ul.nav > li.active > a>span:before,
+nav.navbar.bootsnav ul.nav > li.active > a:hover>span:before,
+nav.navbar.bootsnav ul.nav > li > a:hover>span:before,
+nav.navbar.bootsnav ul.nav > li.on > a>span:before{
+  left: -33%;
+  top: -33%;
+}
+nav.navbar.bootsnav ul.nav > li.active > a>span:after,
+nav.navbar.bootsnav ul.nav > li.active > a:hover>span:after,
+nav.navbar.bootsnav ul.nav > li > a:hover>span:after,
+nav.navbar.bootsnav ul.nav > li.on > a>span:after{
+  left: 33%;
+  top: 33%;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li a:hover,
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu li a:hover,
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu li a.dropdown-toggle:active,
+nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after,
+nav.navbar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a{
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 0 5px #333;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+  color: #273c75;
+  margin: 0 0 0 7px;
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  transition: all 0.3s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+  background-color: #273c75;
+  border-radius: 20px;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top left;
+  transition: all 0.3s ease-out;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+  transform: scaleY(1);
+  visibility: visible !important;
+}
+.dropdown-menu.multi-dropdown{
+  position: absolute;
+  left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+  background-color: #273c75;
+  border: none;
+  border-radius: 20px;
+  top: 108%;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a{
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  position: relative;
+  transition: all 0.3s;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content{
+  background-color: #273c75;
+  overflow: hidden;
+  transform-origin: top center;
+  top: 85%;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{ font-size: 14px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .menu-col li a{
+  color: #fff;
+  padding-left: 10px;
+  position: relative;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .menu-col li a:hover{
+  color: #fff;
+}
+nav.navbar.bootsnav ul.nav li.megamenu-fw > a:hover,
+nav.navbar.bootsnav ul.nav li.megamenu-fw > a:focus,
+nav.navbar.bootsnav ul.nav li.megamenu-fw.on > a{
+  background-color: #273c75 !important;
+  color: #fff;
+}
+nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu{ padding: 0 15px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+  color: #fff;
+  background-color: rgba(0,0,0,0.15);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+@media only screen and (max-width:990px){
+  .dropdown-menu.multi-dropdown{ left: 0 !important; }
+  nav.navbar.bootsnav .navbar-toggle{
+      color: #fff;
+      background: #273c75 !important;
+      padding: 3px 8px;
+      margin-top: 2px;
+      border-radius: 0;
+  }
+  nav.navbar.bootsnav ul.nav>li{ margin: 0 auto 2px; }
+  nav.navbar.bootsnav.navbar-mobile ul.nav>li>a{
+      text-align: center;
+      padding: 10px 15px;
+      margin: 0;
+      border: none;
+  }
+  nav.navbar.bootsnav ul.nav>li.dropdown>a{ padding: 10px 10px 10px 28px; }
+  nav.navbar.bootsnav ul.nav>li.dropdown>a.dropdown-toggle:before{ color: #fff; }
+  nav.navbar.bootsnav ul.nav > li.dropdown > ul{ left: -5px; }
+  nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu{
+      background-color: #273c75;
+      margin: 0 0 -1px 0 !important;
+      z-index: 1;
+  }
+  nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu>li>a{
+      color: #fff;
+      padding-left: 10px;
+      border: none;
+      position: relative;
+  }
+  nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu>li>a:hover{ color: #fff; }
+  nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content{ top: 0; }
+  nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+  }
+  nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .content{ border: none; }
+  nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .col-menu.on .title{ font-weight: 600; }
+  nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .col-menu li a{
+     color: #fff;
+     background-color: #273c75;
+     border: none;
+     margin-bottom: 0;
+     z-index: 1;
+  }
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }

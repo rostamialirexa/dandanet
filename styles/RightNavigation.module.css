@@ -1,0 +1,26 @@
+.UlRightMenu {
+    display: flex;
+    align-items: center;
+  }
+  .UlRightMenu li {
+    color: #616161;
+    font-size: 12px;
+    font-weight: 600;
+  
+  }
+  .categoryProduct {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #f0f0f1 ;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  .categoryProduct i {
+    padding-left: 10px;
+  }
+  .LiRightMenu {
+    padding: 10px;
+    display: block;
+    color: #616161;
+    font-size: 12px;
+  }

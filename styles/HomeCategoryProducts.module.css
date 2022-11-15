@@ -1,0 +1,47 @@
+@media (min-width: 1400px)
+    {
+    .container {
+        max-width: 1320px;
+    }
+    .colHCPI:nth-child(1){
+        margin-right: 115px;
+    }
+    }
+    @media (min-width: 1200px)
+    {
+        .container {
+        max-width: 1140px;
+    }}
+    @media (min-width: 992px)
+   { .container {
+    max-width: 960px;
+}}
+    @media (min-width: 768px)
+    {.container {
+        max-width: 720px;
+    }}
+    @media (min-width: 576px)
+   { .container {
+    max-width: 540px;
+}}
+
+.colHCPI {
+    justify-content: center;
+    align-items: center;
+    text-align:-webkit-center;
+}
+
+.pHCPI {
+    padding: 10px;
+    display: block;
+    color: #616161;
+    font-size: 15px;
+}
+.divHCPI {
+text-align: center;
+margin: 40px auto;
+}
+.divHCPI h4 {
+    font-weight: bold;
+    color: hsl(0deg 0% 24%);
+}

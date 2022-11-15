@@ -1,0 +1,17 @@
+.colHCPI {
+    justify-content: center;
+    align-items: center;
+    text-align:-webkit-center;
+}
+.colHCPI:nth-child(1){
+    margin-right: 115px;
+}
+.carouselSlider {
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.DoubleBanner {
+    margin: 10px;
+    border-radius: 20px;
+}

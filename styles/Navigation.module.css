@@ -1,0 +1,11 @@
+.MenuContainer {
+    padding: 0 15px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 30px;
+  }

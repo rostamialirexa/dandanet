@@ -1,0 +1,143 @@
+.demo{ background-color: #00b197; }
+nav.navbar.bootsnav{
+    font-family: 'Asap', sans-serif;
+    margin-bottom: 150px;
+    border: none;
+    background-color: transparent;
+}
+nav.navbar.bootsnav ul.nav>li{ margin-right: 20px; }
+nav.navbar.bootsnav ul.nav > li > a{
+    color: transparent;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all .5s ease;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{ padding: 10px 30px 10px 15px; }
+nav.navbar.bootsnav ul.nav > li.active > a,
+nav.navbar.bootsnav ul.nav > li.active > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.on > a{
+    color: transparent;
+    background-color: transparent;
+}
+nav.navbar.bootsnav ul.nav > li > a>span:before,
+nav.navbar.bootsnav ul.nav > li > a>span:after{
+    content: attr(data-hover);
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    position: absolute;
+    top:0;
+    left: -100%;
+    transition: all 0.3s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li > a>span:after{
+    background-color: transparent;
+    left: 0;
+}
+nav.navbar.bootsnav ul.nav>li.on>a>span:before,
+nav.navbar.bootsnav ul.nav>li>a:hover>span:before,
+nav.navbar.bootsnav ul.nav>li.active>a>span:before{
+    left: 0;
+}
+nav.navbar.bootsnav ul.nav>li.on>a>span:after,
+nav.navbar.bootsnav ul.nav>li>a:hover>span:after,
+nav.navbar.bootsnav ul.nav>li.active>a>span:after{
+    left: 100%;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li a:hover,
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu li a:hover,
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu li a.dropdown-toggle:active,
+nav.navbar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a{
+    color: #fff !important;
+    background-color: #008E79 !important;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+    color: #fff;
+    margin: 0 0 0 7px;
+    position: absolute;
+    top: 10px;
+    right: 7px;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+    opacity: 0;
+    visibility: hidden;
+    left: 20%;
+    transition: all 0.3s ease-in-out 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+    opacity: 1 !important;
+    visibility: visible !important;
+    left: 0;
+}
+.dropdown-menu.multi-dropdown{
+    position: absolute;
+    left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+    background-color: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 0;
+    top: 120%;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a{
+    color: #555;
+    border: none;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content{
+    top: 90%;
+    left: 5%;
+}
+nav.navbar.bootsnav li.dropdown.on ul.dropdown-menu.megamenu-content{ left: 0; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{ font-size: 14px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .menu-col li a{
+    color: #555;
+    padding-left: 10px;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+    color: #008E79;
+    font-size: 16px;
+    font-weight: bold;
+}
+@media only screen and (max-width:990px){
+    .dropdown-menu.multi-dropdown{ left: 0 !important; }
+    nav.navbar.bootsnav .navbar-toggle{
+        color: #fff;
+        background: transparent !important;
+    }
+    nav.navbar.bootsnav.navbar-mobile .navbar-collapse{ background: #00b197; }
+    nav.navbar.bootsnav ul.nav>li{ margin: 5px auto 15px; }
+    nav.navbar.bootsnav.navbar-mobile ul.nav>li>a{
+        background-color: transparent;
+        text-align: center;
+        padding: 10px 15px;
+        border: none;
+    }
+    nav.navbar.bootsnav ul.nav>li.dropdown>a{ padding: 10px 10px 10px 28px; }
+    nav.navbar.bootsnav ul.nav>li.dropdown>a.dropdown-toggle:before{ color: #fff; }
+    nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu>li>a{
+        color: #fff;
+        padding-left: 10px;
+        border: none;
+    }
+    nav.navbar.bootsnav .dropdown-menu{ z-index: 0; }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+        font-size: 14px;
+        font-weight: normal;
+        color: #fff;
+    }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .col-menu li a{
+       color: #fff;
+       border: none;
+   }
+}

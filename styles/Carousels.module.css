@@ -1,0 +1,33 @@
+.CarouselDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.CarouselSpan {
+    color: #495666;
+}
+.CarouselLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #969fae;
+}
+.CarouselLink svg {
+    width: 5px;
+    fill: #969fae;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ColCarousel {
+    padding: 0;
+}
+.CarouselLink i {
+    margin-bottom: 8px;
+    margin-right: -5px;
+}

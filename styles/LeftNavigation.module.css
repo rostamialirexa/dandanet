@@ -1,0 +1,15 @@
+.leftMenu {
+    color: #616161;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .leftMenu li {
+    font-weight: 200;
+  }
+  
+  .leftMenu span {
+    padding-left: 5px;
+  }
+  .leftMenu i {
+    font-size: 17px;
+  }

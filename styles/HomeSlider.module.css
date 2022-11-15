@@ -1,0 +1,14 @@
+.customimg {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+  
+  .unsetimg {
+    width: 100% !important;
+  }
+  .unsetimg > div {
+    position: unset !important;
+  }
+  
