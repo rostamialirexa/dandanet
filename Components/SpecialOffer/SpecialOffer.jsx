@@ -42,7 +42,7 @@ export default function SpecialOffer() {
                 <Col xs={10}>
                 <Swiper
                    slidesPerView={5}
-        spaceBetween={30}
+        spaceBetween={20}
         slidesPerGroup={4}
                   pagination={{
                     clickable: true,

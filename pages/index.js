@@ -203,3 +203,12 @@ const ThirdDoubleBannerData = [
     </>
   );
 };
+export async function getStaticProps(context) {
+  const response = await fetch('http://localhost:3000/api/hello')
+  console.log(response)
+  return {
+    props:{
+      
+    }
+  }
+}

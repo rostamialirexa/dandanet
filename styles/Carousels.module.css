@@ -31,3 +31,22 @@
     margin-bottom: 8px;
     margin-right: -5px;
 }
+.SwiperSlide {
+    text-align: center;
+    font-size: 18px;
+    background: #cccccc;
+    width: 180px !important;
+    height: 245px !important;
+    color: black;
+    border-radius: 10px;
+
+  }
+  .SwiperSlideBrands {
+    text-align: center;
+    font-size: 18px;
+    background: #cccccc;
+    width: 100px !important;
+    height: 100px !important;
+    color: black;
+    border-radius: 50%;
+  }
