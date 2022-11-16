@@ -9,7 +9,7 @@ export default function FirstDoubleBanner(props) {
   <Row>
   {
     props.FirstDoubleBannerData.map((element)=>(
-      <Col key={element.id} xs={6} className={classes.Col6}>
+      <Col key={element.id} xs={6} className={classe.Col6}>
         <Image
           alt={element.alt}
           src={element.image}
