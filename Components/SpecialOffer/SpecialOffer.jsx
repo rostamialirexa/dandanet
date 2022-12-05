@@ -15,7 +15,8 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
-export default function SpecialOffer() {
+export default function SpecialOffer(props) {
+  const {data} = props;
   return (
     <Container className={classes.specialOffer}>
         <Row>
@@ -39,30 +40,32 @@ export default function SpecialOffer() {
                     
                 </Link>
                 </Col>
-                <Col xs={10}>
+                <Col md={10}>
                 <Swiper
-                   slidesPerView={5}
-        spaceBetween={20}
-        slidesPerGroup={4}
+                  slidesPerView={5}
+                  spaceBetween={20}
+                  slidesPerGroup={4}
                   pagination={{
                     clickable: true,
                   }}
                   navigation={true}
                   modules={[Pagination, Navigation]}
-                  className={classes.mySwiper}
                 >
-        <SwiperSlide className={classes.SwiperSlide}>Slide 1</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 2</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 3</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 4</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 5</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 6</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 7</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 8</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 9</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 10</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 11</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 12</SwiperSlide>
+                {
+                  data.map((element)=>(
+                    <SwiperSlide className={classes.SwiperSlide}>
+                    
+                      <Image
+                        className={classes.ImageProduct}
+                        src={element.image.url}
+                        alt={element.image.alt}
+                        layout='fill'
+                      />
+                      <p className={classes.faCaption}>{element.title.name_fa}</p>
+                    </SwiperSlide>
+                  ))
+                }
+       
       </Swiper>
                 </Col>
         </Row>

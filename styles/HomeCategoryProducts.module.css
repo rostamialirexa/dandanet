@@ -11,19 +11,29 @@
     {
         .container {
         max-width: 1140px;
+    }
+    .colHCPI:nth-child(1){
+        margin-right: 115px;
     }}
     @media (min-width: 992px)
    { .container {
     max-width: 960px;
+}
+.colHCPI:nth-child(1){
+    margin-right: 115px;
 }}
     @media (min-width: 768px)
-    {.container {
+    {
+        .container {
         max-width: 720px;
-    }}
+    }
+}
     @media (min-width: 576px)
-   { .container {
+   { 
+    .container {
     max-width: 540px;
-}}
+    }
+}
 
 .colHCPI {
     justify-content: center;
@@ -45,3 +55,4 @@ margin: 40px auto;
     font-weight: bold;
     color: hsl(0deg 0% 24%);
 }
+

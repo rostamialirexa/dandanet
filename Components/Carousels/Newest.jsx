@@ -13,7 +13,9 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
-export default function Newest() {
+import Image from 'next/image';
+export default function Newest(props) {
+  const {data} = props
   return (
     <Container>
       <Row>
@@ -24,7 +26,7 @@ export default function Newest() {
           
           <Link href='/' className={classes.CarouselLink}>
            <h6> مشاهده همه</h6>
-           <i class="fa fa-angle-left" aria-hidden="true"></i>
+           <i className="fa fa-angle-left" aria-hidden="true"></i>
           </Link>
           </div>
         </Col>
@@ -37,20 +39,22 @@ export default function Newest() {
                   }}
                   navigation={true}
                   modules={[Pagination, Navigation]}
-                  className={classes.mySwiper}
+                  className={classes.MySwiper}
                 >
-        <SwiperSlide className={classes.SwiperSlide}>Slide 1</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 2</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 3</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 4</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 5</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 6</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 7</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 8</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 9</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 10</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 11</SwiperSlide>
-        <SwiperSlide className={classes.SwiperSlide}>Slide 12</SwiperSlide>
+        {
+                  data.map((element)=>(
+                    <SwiperSlide className={classes.SwiperSlide}>
+                    
+                      <Image
+                        className={classes.ImageProduct}
+                        src={element.image.url}
+                        alt={element.image.alt}
+                        layout='fill'
+                      />
+                      <p className={classes.faCaption}>{element.title.name_fa}</p>
+                    </SwiperSlide>
+                  ))
+                }
       </Swiper>
       </Row>
     </Container>

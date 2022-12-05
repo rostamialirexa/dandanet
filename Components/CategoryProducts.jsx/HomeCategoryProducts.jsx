@@ -17,13 +17,14 @@ export default function HomeCategoryProducts(props) {
     {
      props.HCPI.map((element)=>(
 
-     <Col xs={2} key={element.id} className={classes.colHCPI}>
-     <Link href='/'>
+     <Col xxl={2} lg={2} sm={4} xs={4} key={element.id} className={classes.colHCPI}>
+     <Link href='/' >
      <Image
         width={170}
         height={170}
         alt={element.alt}
         src={element.image}
+        className={classes.imageCol}
       />
       <p className={classes.pHCPI}>{element.title}</p>
      </Link>

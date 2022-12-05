@@ -24,7 +24,7 @@ export default function MostVisited() {
           
           <Link href='/' className={classes.CarouselLink}>
            <h6> مشاهده همه</h6>
-           <i class="fa fa-angle-left" aria-hidden="true"></i>
+           <i className="fa fa-angle-left" aria-hidden="true"></i>
           </Link>
           </div>
         </Col>

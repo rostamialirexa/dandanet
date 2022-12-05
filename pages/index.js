@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from 'axios';
 import HomeCategoryProducts from "../Components/CategoryProducts.jsx/HomeCategoryProducts";
 import FirstDoubleBanner from "../Components/Banner/FirstDoubleBanner";
 import SecondDoubleBanner from "../Components/Banner/SecondDoubleBanner";
@@ -11,13 +12,21 @@ import Bestselling from "../Components/Carousels/Bestselling";
 import MostVisited from "../Components/Carousels/MostVisited";
 import ThirdDoubleBanner from "../Components/Banner/ThirdDoubleBanner";
 import Brands from "../Components/Carousels/Brands";
+import Meta from "../Components/Header/MetaTags/Meta";
+import { buildProductsPath, extractProducts } from "./api/products";
 
-
-
-export default function Home () {
+export default function Home (props) {
   const [IsLoading,setIsLoading] = useState(true)
+  const [specialProducts,setSpecialProducts] = useState()
+
+
+
+
+
+
 
   useEffect(()=>{
+    console.log(props.data)
     setInterval(() => {
       setIsLoading(false)
     }, 1000);
@@ -177,6 +186,9 @@ const ThirdDoubleBannerData = [
 ]
   return (
     <>
+    <Meta 
+    title=' فروشگاه اینترنتی لوازم و تجهیزات دندانپزشکی' 
+    description='دندانت، فروشگاه تجهیزات دندانپزشکی، آماده فروش ابزار دندانپزشکی با ضمانت اصالت کالاست. برای مشاهده قیمت ها و خرید کالاهای دندانپزشکی وارد شوید'/>
         {
           IsLoading ? 
               (
@@ -187,13 +199,13 @@ const ThirdDoubleBannerData = [
                     <>
                     <HomeSlider HSI={HomeSliderImages}/>
                     <HomeCategoryProducts HCPI={HomeCategoryProductsImages}/>
-                    <SpecialOffer/>
+                    <SpecialOffer data={props.dataProducts}/>
                     <FirstDoubleBanner FirstDoubleBannerData={FirstDoubleBannerData}/>
-                    <Newest/>
+                    <Newest data={props.dataProducts}/>
                     <UltraBanner UltraBannerData={UltraBannerData}/>
-                    <Bestselling/>
+                    <Bestselling data={props.dataProducts}/>
                     <SecondDoubleBanner SecondDoubleBannerData={SecondDoubleBannerData}/>
-                    <MostVisited/>
+                    <MostVisited data={props.dataProducts}/>
                     <ThirdDoubleBanner ThirdDoubleBannerData={ThirdDoubleBannerData}/>
                     <Brands/>
                     </>
@@ -203,12 +215,16 @@ const ThirdDoubleBannerData = [
     </>
   );
 };
-export async function getStaticProps(context) {
-  const response = await fetch('http://localhost:3000/api/hello')
-  console.log(response)
+
+
+export async function getStaticProps(){
+  const filePathProducts = buildProductsPath();
+  const dataProducts = extractProducts(filePathProducts);
+  
   return {
     props:{
-      
+      dataProducts,
+
     }
   }
 }

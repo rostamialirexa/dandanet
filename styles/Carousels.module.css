@@ -32,21 +32,31 @@
     margin-right: -5px;
 }
 .SwiperSlide {
-    text-align: center;
-    font-size: 18px;
-    background: #cccccc;
-    width: 180px !important;
-    height: 245px !important;
-    color: black;
+    background: #fff;
     border-radius: 10px;
-
+    height: 245px !important;
   }
   .SwiperSlideBrands {
     text-align: center;
     font-size: 18px;
     background: #cccccc;
-    width: 100px !important;
-    height: 100px !important;
+    width: 10% !important;
+    height: 100% !important;
     color: black;
     border-radius: 50%;
+  }
+  .ImageProduct {
+    margin: 10px 0px 0px 0px;
+    display: block;
+    height: 120px !important;
+  }
+  .faCaption {
+    margin-top: 50px;
+    font-size: 12px;
+    color: black;
+  }
+  .MySwiper {
+    background: hsla(192, 43%, 93%, 1);
+    padding: 10px;
+    border-radius: 20px;
   }

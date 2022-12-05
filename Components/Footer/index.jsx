@@ -62,22 +62,22 @@ export default function Footer() {
                 </section>
                 <section className={classes.lastSection}>
                     <Link href='' className={classes.Medialink}>
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i className="fa fa-facebook" aria-hidden="true"></i>
                     </Link>
                     <Link href='' className={classes.Medialink}>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i className="fa fa-twitter" aria-hidden="true"></i>
                     </Link>
                     <Link href='' className={classes.Medialink}>
-                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <i className="fa fa-google" aria-hidden="true"></i>
                     </Link>
                     <Link href='' className={classes.Medialink}>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i className="fa fa-instagram" aria-hidden="true"></i>
                     </Link>
                     <Link href='' className={classes.Medialink}>
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <i className="fa fa-linkedin" aria-hidden="true"></i>
                     </Link>
                     <Link href='' className={classes.Medialink}>
-                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <i className="fa fa-github" aria-hidden="true"></i>
                     </Link>
                 </section>
             </Container>

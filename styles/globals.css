@@ -41,7 +41,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 250px;
   font-size: 10vw;
   text-align: center;
   color: #fff;
@@ -65,6 +65,7 @@ li {
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
+  
 }
 .swiper-pagination-bullet span {
   color: #fff;
@@ -302,4 +303,19 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
 }

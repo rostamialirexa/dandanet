@@ -32,11 +32,17 @@
     margin: 12px 10px 10px 10px;
 }
   .SwiperSlide {
-    text-align: center;
-    font-size: 18px;
     background: #fff;
-    width: 180px !important;
-    height: 245px !important;
-    color: black;
     border-radius: 10px;
+    height: 245px !important;
+  }
+  .faCaption {
+    margin-top: 50px;
+    font-size: 12px;
+    color: black;
+  }
+  .ImageProduct {
+    margin: 10px 0px 0px 0px;
+    display: block;
+    height: 120px !important;
   }

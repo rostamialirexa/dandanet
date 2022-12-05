@@ -7,19 +7,23 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Image from 'next/image';
+import { Col, Container, Row } from 'react-bootstrap';
 export default function HomeSlider(props) {
   
   return (
-    <Swiper
+    <Container fluid="true" >
+      <Row>
+        <Col>
+        <Swiper
         effect='fade'
-        spaceBetween={30}
+       
         centeredSlides={true}
         loop={true}
         autoplay={{delay: 2500,disableOnInteraction: false,}}
         pagination={{clickable: true}}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+
       >
       {
         props.HSI.map((element)=>(
@@ -27,7 +31,8 @@ export default function HomeSlider(props) {
                 <Image 
                 alt={element.alt}
                 src={element.image}
-                layout="fill" 
+                width={1500}
+                height={500}
                 className={classes.customimg}
             />
         </SwiperSlide>
@@ -35,5 +40,8 @@ export default function HomeSlider(props) {
       }
   
     </Swiper>
+        </Col>
+      </Row>
+    </Container>
   )
 }

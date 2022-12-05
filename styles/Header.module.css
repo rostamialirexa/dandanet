@@ -53,17 +53,18 @@ width: 70%;
   font-weight: 700;
 }
 .customimg {
-  object-fit: contain;
+
   width: 100% !important;
+  height: 200px !important;
   position: relative !important;
   height: unset !important;
 }
 .unsetimg {
-  width: 100% !important;
+  width: 100%;
+  margin: 0;
 }
-.unsetimg > div {
-  position: unset !important;
-}
+
+
 @media (max-width:768px) {
   .headerLeft {
     display: none;
